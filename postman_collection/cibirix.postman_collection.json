@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "94538ba0-0031-4305-af8b-832ab9b6efb4",
+		"name": "cibirix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"James\",\"email\":\"james@mailinator.com\",\"password\":\"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"peter@mailinator.com\",\"password\":\"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Listings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzViYTFiY2EzZjg3M2NkOTJjNTUzMjgzYjk2ZDE2ODA3ZWM4YWY0MGE2YjI4YWRhNmI1OTBiMDdhNDJjYTYzZGI2N2FiNmJmMDRlOWRjZTciLCJpYXQiOjE2NjkxOTc1ODUuNTg3MiwibmJmIjoxNjY5MTk3NTg1LjU4NzIwNiwiZXhwIjoxNzAwNzMzNTg1LjUwNTc2Miwic3ViIjoiMiIsInNjb3BlcyI6W119.fcqmPjznf2BgKWIGzs4vECANg0YUPiRy5fjfh0y2T1nuoahC6c_PbdQYvx_P3aHTVWsrgAwv72kd_1gjtZ9wrX6HizZ-Fz4ZMytX_2uVCszL0L4VyGWMelUPX7dfDpRzFu_MXnBuKHMQG-LIvUYRZuDpuPXRLgddWiwptjgbHOAjUvmDYkr7Dp_BZ-Ko95e8q--vImqYjEGChliUP4V40LYjS8jaHi1sYdefMa_nfPPGGD6lUyjBy_NjkzOV1KlBcSLc1ktieoK5HMpswgV3UjcDpBnu-Aj8dJA3rRXo26e4dyodhB6N9LhUQ9KgT5_xd4LMczn68PXryFnUb4u_p448oGitrmhrQqjk4xiQwRvwbQkguY8q0YzGukI3eMxP1lOWDrwLZrjmnPy1UoWqjTV6vfrRm8qJnajxeH4O96ImU2CwaW_f6CA4YvkZb-2M-a6RVpfg2s8gzDpyf453PNVvwOENQO82AmFXRiv0SSdBlmPRw9A7_Vixf2Qo3EUTq9HKcjro8-xlS0gAu4SiljGkXCI2UZNuRUokaFNUI3-nPgilx0ZJlosoKHRzrVrmxpbLUajGNHULce310ijPN6VP6SdM-qesk47hPrMKkB0MPK5wM48KVg1yhhdvEWM-dPC5GvVB2Ovbp9e0yDgKrrXlKkPmaHXqgcnVDyx1RYo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/listings?page=1&search=anil+gothi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"listings"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "anil+gothi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
